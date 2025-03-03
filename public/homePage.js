@@ -33,7 +33,7 @@ moneyManager.addMoneyCallback = ({ currency, amount }) => {
             ProfileWidget.showProfile(response.data);
             message = "пополнение успешно";
         } else {
-            message = "ошибка при пополнении";
+            message = response.error;
         }
         moneyManager.setMessage(response.success, message);
     });
@@ -45,7 +45,7 @@ moneyManager.conversionMoneyCallback = ({ fromCurrency, targetCurrency, fromAmou
             ProfileWidget.showProfile(response.data);
             message = "конвертация успешна";
         } else {
-            message = "ошибка при конвертации";
+            message = response.error;
         }
         moneyManager.setMessage(response.success, message);
     });
@@ -57,7 +57,7 @@ moneyManager.sendMoneyCallback = ({ to, currency, amount }) => {
             ProfileWidget.showProfile(response.data);
             message = "перевод успешный";
         } else {
-            message = "ошибка при переводе";
+            message = response.error;
         }
         moneyManager.setMessage(response.success, message);
     });
@@ -80,7 +80,7 @@ favoritesWidget.addUserCallback = ({ id, name }) => {
             moneyManager.updateUsersList(response.data);
             message = "добавление успешно";
         } else {
-            message = "ошибка при добавлении";
+            message = response.error;
         }
         favoritesWidget.setMessage(response.success, message);
     });
@@ -94,7 +94,7 @@ favoritesWidget.removeUserCallback = (id) => {
             moneyManager.updateUsersList(response.data);
             message = "удаление успешно";
         } else {
-            message = "ошибка при удалении";
+            message = response.error;
         }
         favoritesWidget.setMessage(response.success, message);
     });

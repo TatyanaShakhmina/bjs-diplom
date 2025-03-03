@@ -58,7 +58,7 @@
         "RUB": 60000,
         "USD": 500,
         "EUR": 600,
-        "NTC": 90000
+        "NTC": 90545
       }
     },
     {
@@ -66,6 +66,18 @@
       "login": "JH",
       "password": "LK",
       "id": 6,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
+    },
+    {
+      "created_at": "2025-03-03T13:14:06.991Z",
+      "login": "ggg",
+      "password": "ddd",
+      "id": 7,
       "balance": {
         "RUB": 0,
         "USD": 0,
